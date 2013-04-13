@@ -36,6 +36,11 @@ sub uri_for { Amon2->context()->uri_for(@_) }
     }
 }
 
+sub like_location {
+    my $path = shift;
+    Amon2->context->req->uri->path =~ m{^$path};
+}
+
 sub user { Amon2->context->user }
 
 sub l {
