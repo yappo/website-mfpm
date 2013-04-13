@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <title>[% title || 'MFPM' %]</title>
+    <title>[% title || l('MFPM - My Favorite Perl Modules') %]</title>
     <meta http-equiv="Content-Style-Type" content="text/css" />
     <meta http-equiv="Content-Script-Type" content="text/javascript" />
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
@@ -26,7 +26,7 @@
     <div class="navbar navbar-fixed-top">
         <div class="navbar-inner">
             <div class="container">
-                <a class="brand" href="#"><img src="/static/img/mfpm.png">MFPM</a>
+                <a class="brand" href="#"><img src="/static/img/mfpm.png">[% l('MFPM - My Favorite Perl Modules') %]</a>
                 <div class="nav-collapse">
                     <ul class="nav">
                         <li class="active"><a href="#">Home</a></li>
@@ -36,14 +36,14 @@
                     </ul>
                 <ul class="nav pull-right">
 [% IF user() -%]
-                  <li><a>Hello, [% user().login -%]</a></li>
+                  <li><a>[% l('Hello, %1', user().login) -%]</a></li>
                   <li>
-                      <a href="#logout" id="logout-link">logout</a>
+                      <a href="#logout" id="logout-link">[% l('logout') -%]</a>
                       <form action="/account/logout" method="post" id="logout-form">
                       </form>
                   </li>
 [% ELSE -%]
-                  <li><a href="/account/login">login</a></li>
+                  <li><a href="/account/login">[% l('login') -%]</a></li>
 [% END -%]                  
                 </ul>
 

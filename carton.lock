@@ -2394,6 +2394,64 @@
          "target" : "File::Copy::Recursive",
          "version" : "0.38"
       },
+      "File::Find::Rule" : {
+         "dist" : "File-Find-Rule-0.33",
+         "mymeta" : {
+            "abstract" : "unknown",
+            "author" : [
+               "unknown"
+            ],
+            "dynamic_config" : 0,
+            "generated_by" : "ExtUtils::MakeMaker version 6.57_05, CPAN::Meta::Converter version 2.120921",
+            "license" : [
+               "unknown"
+            ],
+            "meta-spec" : {
+               "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+               "version" : "2"
+            },
+            "name" : "File-Find-Rule",
+            "no_index" : {
+               "directory" : [
+                  "t",
+                  "inc"
+               ]
+            },
+            "prereqs" : {
+               "build" : {
+                  "requires" : {
+                     "ExtUtils::MakeMaker" : "0"
+                  }
+               },
+               "configure" : {
+                  "requires" : {
+                     "ExtUtils::MakeMaker" : "0"
+                  }
+               },
+               "runtime" : {
+                  "requires" : {
+                     "File::Find" : "0",
+                     "File::Spec" : "0",
+                     "Number::Compare" : "0",
+                     "Test::More" : "0",
+                     "Text::Glob" : "0.07"
+                  }
+               }
+            },
+            "release_status" : "stable",
+            "version" : "0.33"
+         },
+         "name" : "File::Find::Rule",
+         "pathname" : "R/RC/RCLAMP/File-Find-Rule-0.33.tar.gz",
+         "provides" : {
+            "File::Find::Rule" : {
+               "file" : "File/Find/Rule.pm",
+               "version" : "0.33"
+            }
+         },
+         "target" : "File::Find::Rule",
+         "version" : "0.33"
+      },
       "File::HomeDir" : {
          "dist" : "File-HomeDir-1.00",
          "mymeta" : {
@@ -4866,6 +4924,225 @@
          "target" : "List::MoreUtils",
          "version" : "0.33"
       },
+      "Locale::Maketext::Extract::Plugin::Xslate" : {
+         "dist" : "Locale-Maketext-Extract-Plugin-Xslate-v0.0.1",
+         "mymeta" : {
+            "abstract" : "Xslate format parser",
+            "author" : [
+               "Kazuhiro Osawa E<lt>yappo {@} shibuya {dot} plE<gt>"
+            ],
+            "dynamic_config" : 0,
+            "generated_by" : "Module::Build version 0.38, CPAN::Meta::Converter version 2.120921",
+            "license" : [
+               "perl_5"
+            ],
+            "meta-spec" : {
+               "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+               "version" : "2"
+            },
+            "name" : "Locale-Maketext-Extract-Plugin-Xslate",
+            "no_index" : {
+               "directory" : [
+                  "inc"
+               ]
+            },
+            "prereqs" : {
+               "build" : {
+                  "requires" : {
+                     "Test::More" : "0.98",
+                     "Test::Requires" : "0"
+                  }
+               },
+               "configure" : {
+                  "requires" : {
+                     "Module::Build" : "0.38"
+                  }
+               },
+               "runtime" : {
+                  "requires" : {
+                     "Locale::Maketext::Extract" : "0",
+                     "Text::Xslate" : "0",
+                     "parent" : "0",
+                     "perl" : "5.008005"
+                  }
+               }
+            },
+            "provides" : {
+               "Locale::Maketext::Extract::Plugin::Xslate" : {
+                  "file" : "lib/Locale/Maketext/Extract/Plugin/Xslate.pm",
+                  "version" : "v0.0.1"
+               }
+            },
+            "release_status" : "stable",
+            "resources" : {
+               "license" : [
+                  "http://dev.perl.org/licenses/"
+               ]
+            },
+            "version" : "v0.0.1"
+         },
+         "name" : "Locale::Maketext::Extract::Plugin::Xslate",
+         "pathname" : "Y/YA/YAPPO/Locale-Maketext-Extract-Plugin-Xslate-v0.0.1.tar.gz",
+         "provides" : {
+            "Locale::Maketext::Extract::Plugin::Xslate" : {
+               "file" : "Locale/Maketext/Extract/Plugin/Xslate.pm",
+               "version" : "v0.0.1"
+            }
+         },
+         "target" : "Locale::Maketext::Extract::Plugin::Xslate",
+         "version" : "v0.0.1"
+      },
+      "Locale::Maketext::Lexicon" : {
+         "dist" : "Locale-Maketext-Lexicon-0.93",
+         "mymeta" : {
+            "abstract" : "Use other catalog formats in Maketext",
+            "author" : [
+               "Clinton Gormley <drtech@cpan.org>",
+               "Audrey Tang <cpan@audreyt.org>"
+            ],
+            "dynamic_config" : 0,
+            "generated_by" : "Dist::Zilla version 4.300030, CPAN::Meta::Converter version 2.120921",
+            "license" : [
+               "mit"
+            ],
+            "meta-spec" : {
+               "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+               "version" : "2"
+            },
+            "name" : "Locale-Maketext-Lexicon",
+            "prereqs" : {
+               "build" : {
+                  "requires" : {}
+               },
+               "configure" : {
+                  "requires" : {
+                     "ExtUtils::MakeMaker" : "6.30"
+                  }
+               },
+               "runtime" : {
+                  "recommends" : {
+                     "HTML::Parser" : "3.56",
+                     "Lingua::EN::Sentence" : "0.25",
+                     "PPI" : "1.203",
+                     "Template" : "2.20",
+                     "Template::Constants" : "2.75",
+                     "Text::HAML" : "0",
+                     "YAML" : "0.66",
+                     "YAML::Loader" : "0.66"
+                  },
+                  "requires" : {
+                     "Locale::Maketext" : "1.17"
+                  }
+               }
+            },
+            "release_status" : "stable",
+            "resources" : {
+               "bugtracker" : {
+                  "web" : "https://github.com/clintongormley/locale-maketext-lexicon/issues"
+               },
+               "homepage" : "http://search.cpan.org/dist/Locale-Maketext-Lexicon",
+               "repository" : {
+                  "type" : "git",
+                  "url" : "git://github.com/clintongormley/locale-maketext-lexicon.git"
+               }
+            },
+            "version" : "0.93"
+         },
+         "name" : "Locale::Maketext::Lexicon",
+         "pathname" : "D/DR/DRTECH/Locale-Maketext-Lexicon-0.93.tar.gz",
+         "provides" : {
+            "Locale::Maketext::Extract" : {
+               "file" : "Locale/Maketext/Extract.pm",
+               "version" : "0.93"
+            },
+            "Locale::Maketext::Extract::Plugin::Base" : {
+               "file" : "Locale/Maketext/Extract/Plugin/Base.pm",
+               "version" : "0.93"
+            },
+            "Locale::Maketext::Extract::Plugin::FormFu" : {
+               "file" : "Locale/Maketext/Extract/Plugin/FormFu.pm",
+               "version" : "0.93"
+            },
+            "Locale::Maketext::Extract::Plugin::FormFu::Extractor" : {
+               "file" : "Locale/Maketext/Extract/Plugin/FormFu.pm",
+               "version" : "0.93"
+            },
+            "Locale::Maketext::Extract::Plugin::Generic" : {
+               "file" : "Locale/Maketext/Extract/Plugin/Generic.pm",
+               "version" : "0.93"
+            },
+            "Locale::Maketext::Extract::Plugin::Haml" : {
+               "file" : "Locale/Maketext/Extract/Plugin/Haml.pm",
+               "version" : "0.93"
+            },
+            "Locale::Maketext::Extract::Plugin::Mason" : {
+               "file" : "Locale/Maketext/Extract/Plugin/Mason.pm",
+               "version" : "0.93"
+            },
+            "Locale::Maketext::Extract::Plugin::PPI" : {
+               "file" : "Locale/Maketext/Extract/Plugin/PPI.pm",
+               "version" : "0.93"
+            },
+            "Locale::Maketext::Extract::Plugin::Perl" : {
+               "file" : "Locale/Maketext/Extract/Plugin/Perl.pm",
+               "version" : "0.93"
+            },
+            "Locale::Maketext::Extract::Plugin::TT2" : {
+               "file" : "Locale/Maketext/Extract/Plugin/TT2.pm",
+               "version" : "0.93"
+            },
+            "Locale::Maketext::Extract::Plugin::TT2::Directive" : {
+               "file" : "Locale/Maketext/Extract/Plugin/TT2.pm",
+               "version" : "0.93"
+            },
+            "Locale::Maketext::Extract::Plugin::TT2::Parser" : {
+               "file" : "Locale/Maketext/Extract/Plugin/TT2.pm",
+               "version" : "0.93"
+            },
+            "Locale::Maketext::Extract::Plugin::TextTemplate" : {
+               "file" : "Locale/Maketext/Extract/Plugin/TextTemplate.pm",
+               "version" : "0.93"
+            },
+            "Locale::Maketext::Extract::Plugin::TextTemplate::Parser" : {
+               "file" : "Locale/Maketext/Extract/Plugin/TextTemplate.pm",
+               "version" : "0.93"
+            },
+            "Locale::Maketext::Extract::Plugin::YAML" : {
+               "file" : "Locale/Maketext/Extract/Plugin/YAML.pm",
+               "version" : "0.93"
+            },
+            "Locale::Maketext::Extract::Plugin::YAML::Extractor" : {
+               "file" : "Locale/Maketext/Extract/Plugin/YAML.pm",
+               "version" : "0.93"
+            },
+            "Locale::Maketext::Extract::Run" : {
+               "file" : "Locale/Maketext/Extract/Run.pm",
+               "version" : "0.93"
+            },
+            "Locale::Maketext::Lexicon" : {
+               "file" : "Locale/Maketext/Lexicon.pm",
+               "version" : "0.93"
+            },
+            "Locale::Maketext::Lexicon::Auto" : {
+               "file" : "Locale/Maketext/Lexicon/Auto.pm",
+               "version" : "0.93"
+            },
+            "Locale::Maketext::Lexicon::Gettext" : {
+               "file" : "Locale/Maketext/Lexicon/Gettext.pm",
+               "version" : "0.93"
+            },
+            "Locale::Maketext::Lexicon::Msgcat" : {
+               "file" : "Locale/Maketext/Lexicon/Msgcat.pm",
+               "version" : "0.93"
+            },
+            "Locale::Maketext::Lexicon::Tie" : {
+               "file" : "Locale/Maketext/Lexicon/Tie.pm",
+               "version" : "0.93"
+            }
+         },
+         "target" : "Locale::Maketext::Extract",
+         "version" : "0.93"
+      },
       "Mac::SystemDirectory" : {
          "dist" : "Mac-SystemDirectory-0.06",
          "mymeta" : {
@@ -5623,6 +5900,60 @@
          },
          "target" : "Net::Twitter::Lite",
          "version" : "0.12002"
+      },
+      "Number::Compare" : {
+         "dist" : "Number-Compare-0.03",
+         "mymeta" : {
+            "abstract" : "unknown",
+            "author" : [
+               "unknown"
+            ],
+            "dynamic_config" : 0,
+            "generated_by" : "ExtUtils::MakeMaker version 6.57_05, CPAN::Meta::Converter version 2.120921",
+            "license" : [
+               "unknown"
+            ],
+            "meta-spec" : {
+               "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+               "version" : "2"
+            },
+            "name" : "Number-Compare",
+            "no_index" : {
+               "directory" : [
+                  "t",
+                  "inc"
+               ]
+            },
+            "prereqs" : {
+               "build" : {
+                  "requires" : {
+                     "ExtUtils::MakeMaker" : "0"
+                  }
+               },
+               "configure" : {
+                  "requires" : {
+                     "ExtUtils::MakeMaker" : "0"
+                  }
+               },
+               "runtime" : {
+                  "requires" : {
+                     "Test::More" : "0"
+                  }
+               }
+            },
+            "release_status" : "stable",
+            "version" : "0.03"
+         },
+         "name" : "Number::Compare",
+         "pathname" : "R/RC/RCLAMP/Number-Compare-0.03.tar.gz",
+         "provides" : {
+            "Number::Compare" : {
+               "file" : "Number/Compare.pm",
+               "version" : "0.03"
+            }
+         },
+         "target" : "Number::Compare",
+         "version" : "0.03"
       },
       "POSIX::AtFork" : {
          "dist" : "POSIX-AtFork-0.02",
@@ -8670,6 +9001,60 @@
          },
          "target" : "Test::Warn",
          "version" : "0.24"
+      },
+      "Text::Glob" : {
+         "dist" : "Text-Glob-0.09",
+         "mymeta" : {
+            "abstract" : "match globbing patterns against text",
+            "author" : [
+               "Richard Clamp <richardc@unixbeard.net>"
+            ],
+            "dynamic_config" : 0,
+            "generated_by" : "Module::Build version 0.38, CPAN::Meta::Converter version 2.120921",
+            "license" : [
+               "perl_5"
+            ],
+            "meta-spec" : {
+               "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+               "version" : "2"
+            },
+            "name" : "Text-Glob",
+            "prereqs" : {
+               "build" : {
+                  "requires" : {
+                     "Test::More" : "0"
+                  }
+               },
+               "configure" : {
+                  "requires" : {
+                     "Module::Build" : "0.36"
+                  }
+               }
+            },
+            "provides" : {
+               "Text::Glob" : {
+                  "file" : "lib/Text/Glob.pm",
+                  "version" : "0.09"
+               }
+            },
+            "release_status" : "stable",
+            "resources" : {
+               "license" : [
+                  "http://dev.perl.org/licenses/"
+               ]
+            },
+            "version" : "0.09"
+         },
+         "name" : "Text::Glob",
+         "pathname" : "R/RC/RCLAMP/Text-Glob-0.09.tar.gz",
+         "provides" : {
+            "Text::Glob" : {
+               "file" : "Text/Glob.pm",
+               "version" : "0.09"
+            }
+         },
+         "target" : "Text::Glob",
+         "version" : "0.09"
       },
       "Text::Xslate" : {
          "dist" : "Text-Xslate-2.0000",

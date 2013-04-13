@@ -5,6 +5,7 @@ use utf8;
 use parent qw(Exporter);
 use Module::Functions;
 use File::Spec;
+use Text::Xslate;
 
 our @EXPORT = get_public_functions();
 
@@ -36,5 +37,11 @@ sub uri_for { Amon2->context()->uri_for(@_) }
 }
 
 sub user { Amon2->context->user }
+
+sub l {
+    my $base = shift;
+    my @args = map { Text::Xslate::html_escape $_ } @_; # escape arguments
+    Text::Xslate::mark_raw(MFPM->context->loc($base, @args));
+}
 
 1;

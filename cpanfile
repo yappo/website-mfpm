@@ -15,6 +15,9 @@ requires 'Amon2::Auth'                     => '0.02';
 requires 'Config::Pit'                     => '0.04';
 requires 'Module::Find'                    => '0';
 requires 'Cache::Memcached::Fast::Safe'    => '0';
+requires 'Locale::Maketext::Extract'       => '0';
+requires 'Locale::Maketext::Extract::Plugin::Xslate' => '0';
+requires 'File::Find::Rule'                => '0';
 
 on 'configure' => sub {
    requires 'Module::Build'     => '0.38';
