@@ -64,7 +64,6 @@ __PACKAGE__->add_trigger(
 
 sub user {
     my $c = shift;
-use Data::Dumper;warn Dumper($c->session);
     return unless $c->session->get('user');
     $c->session->get('user');
 }
