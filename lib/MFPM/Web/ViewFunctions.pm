@@ -23,7 +23,7 @@ sub uri_for { Amon2->context()->uri_for(@_) }
     my %static_file_cache;
     sub static_file {
         my $fname = shift;
-        my $c = Amon2->context;
+        my $c = MFPM->context;
         if (not exists $static_file_cache{$fname}) {
             my $fullpath = File::Spec->catfile($c->base_dir(), $fname);
             $static_file_cache{$fname} = (stat $fullpath)[9];
@@ -38,10 +38,10 @@ sub uri_for { Amon2->context()->uri_for(@_) }
 
 sub like_location {
     my $path = shift;
-    Amon2->context->req->uri->path =~ m{^$path};
+    MFPM->context->req->uri->path =~ m{^$path};
 }
 
-sub user { Amon2->context->user }
+sub user { MFPM->context->user }
 
 sub l {
     my $base = shift;
