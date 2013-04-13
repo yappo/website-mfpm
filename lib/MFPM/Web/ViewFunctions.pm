@@ -41,6 +41,7 @@ sub like_location {
     MFPM->context->req->uri->path =~ m{^$path};
 }
 
+sub is_login { !! MFPM->context->user }
 sub user { MFPM->context->user }
 
 sub l {

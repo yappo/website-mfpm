@@ -29,12 +29,12 @@
                 <a class="brand" href="/"><img src="/static/img/mfpm.png" width="24" />MFPM</a>
                 <div class="nav-collapse">
                     <ul class="nav">
-[% IF user() -%]
+[% IF is_login() -%]
                         <li><a href="/dashboard"[% IF like_location('/dashboard') %] class="active"[% END %]>[% l('dashboard') %]</a></li>
 [% END -%]
                     </ul>
                 <ul class="nav pull-right">
-[% IF user() -%]
+[% IF is_login() -%]
                   <li><a href="[% user().html_url %]"><img src="[% user().avatar_url %]" width="16" />[% l('Hello, %1', user().login) -%]</a></li>
                   <li>
                       <a href="#logout" id="logout-link">[% l('logout') -%]</a>
