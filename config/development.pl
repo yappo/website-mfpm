@@ -8,6 +8,7 @@ my $basedir = File::Spec->rel2abs(File::Spec->catdir(dirname(__FILE__), '..'));
 my $dbpath = File::Spec->catfile($basedir, 'db', 'development.db');
 
 my $common_config = do File::Spec->catfile($basedir, 'config', 'common.pl');
+#$common_config->{Auth}{Github}{redirect_uri} = '';
 +{
     %{ $common_config },
     'DBI' => [

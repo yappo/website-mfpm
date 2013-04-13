@@ -35,4 +35,6 @@ sub uri_for { Amon2->context()->uri_for(@_) }
     }
 }
 
+sub user { Amon2->context->user }
+
 1;

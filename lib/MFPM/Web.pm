@@ -17,6 +17,18 @@ __PACKAGE__->load_plugins(
     'Web::CSRFDefender' => {
         post_only => 1,
     },
+    'Web::Auth' => {
+        module => 'Github',
+        on_finished => sub {
+            my ($c, $token, $user) = @_;
+            use Data::Dumper;warn Dumper(\@_);
+            my $name = $user->{name} || die;
+            $c->session->set('user' => $user);
+            $c->session->set('github_token' => $token);
+            return $c->redirect('/');
+        },
+        authenticate_path => '/account/login',
+    },
 );
 
 # setup view
@@ -49,5 +61,12 @@ __PACKAGE__->add_trigger(
         return;
     },
 );
+
+sub user {
+    my $c = shift;
+use Data::Dumper;warn Dumper($c->session);
+    return unless $c->session->get('user');
+    $c->session->get('user');
+}
 
 1;

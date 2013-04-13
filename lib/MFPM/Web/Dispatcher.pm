@@ -2,17 +2,31 @@ package MFPM::Web::Dispatcher;
 use strict;
 use warnings;
 use utf8;
-use Amon2::Web::Dispatcher::Lite;
+use  MFPM::Web::DispatcherDeclare qw/ get post /;
 
-any '/' => sub {
-    my ($c) = @_;
-    return $c->render('index.tt');
-};
+use Module::Find ();
+my @controllers = Module::Find::useall('MFPM::Web::C');
 
-post '/account/logout' => sub {
-    my ($c) = @_;
-    $c->session->expire();
-    return $c->redirect('/');
-};
+# define roots here.
+use Router::Simple::Declare;
+my $router;
+sub router_obj {
+    $router = router {
+        get  '/'                                         => 'Root#index';
+        post '/account/logout'                           => 'Root#logout';
+    };
+}
+
+sub dispatch {
+    my($class, $c) = @_;
+    my $req = $c->request;
+    if (my $p = $class->router_obj->match($req->env)) {
+        my $action = $p->{action};
+        $c->{args} = $p;
+        "@{[ ref Amon2->context ]}::C::$p->{controller}"->$action($c, $p);
+    } else {
+        $c->res_404();
+    }
+}
 
 1;

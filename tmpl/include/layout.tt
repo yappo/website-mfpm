@@ -34,6 +34,19 @@
                         <li><a href="#">Link</a></li>
                         <li><a href="#">Link</a></li>
                     </ul>
+                <ul class="nav pull-right">
+[% IF user() -%]
+                  <li><a>Hello, [% user().login -%]</a></li>
+                  <li>
+                      <a href="#logout" id="logout-link">logout</a>
+                      <form action="/account/logout" method="post" id="logout-form">
+                      </form>
+                  </li>
+[% ELSE -%]
+                  <li><a href="/account/login">login</a></li>
+[% END -%]                  
+                </ul>
+
                 </div>
             </div>
         </div><!-- /.navbar-inner -->
@@ -46,5 +59,11 @@
             Powered by <a href="http://amon.64p.org/">Amon2</a>
         </footer>
     </div>
+<script>
+$("#logout-link").click(function () {
+    $("#logout-form").submit();
+    return false;
+});
+</script>
 </body>
 </html>

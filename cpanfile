@@ -11,6 +11,11 @@ requires 'Plack::Session'                  => '0.14';
 requires 'Test::WWW::Mechanize::PSGI'      => '0';
 requires 'Time::Piece'                     => '1.20';
 
+requires 'Amon2::Auth'                     => '0.02';
+requires 'Config::Pit'                     => '0.04';
+requires 'Module::Find'                    => '0';
+requires 'Cache::Memcached::Fast::Safe'    => '0';
+
 on 'configure' => sub {
    requires 'Module::Build'     => '0.38';
    requires 'Module::CPANfile' => '0.9010';
