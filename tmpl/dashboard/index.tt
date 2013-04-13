@@ -1,0 +1,9 @@
+[% WRAPPER 'include/layout.tt' %]
+
+<h1>[% l('Watching modules') %]</h1>
+
+<h1>[% l('Tips') %]</h1>
+
+<h1>[% l('Reviews') %]</h1>
+
+[% END %]

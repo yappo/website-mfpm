@@ -13,6 +13,7 @@ my $router;
 sub router_obj {
     $router = router {
         get  '/'                                         => 'Root#index';
+        get  '/dashboard'                                => 'Dashboard#index';
         post '/account/logout'                           => 'Root#logout';
     };
 }
