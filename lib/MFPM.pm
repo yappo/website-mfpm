@@ -4,23 +4,26 @@ use warnings;
 use utf8;
 use parent qw/Amon2/;
 our $VERSION='0.01';
-use 5.008001;
+use 5.016;
 
-__PACKAGE__->load_plugin(qw/DBI/);
+__PACKAGE__->load_plugin('Web::Auth', {
+    module => 'Github',
+    on_finished => sub {
+        my ($c, $token, $user) = @_;
+        use Data::Dumper;warn Dumper(\@_);
+
+        my $name = $user->{name} || die;
+        $c->session->set('name' => $name);
+        $c->session->set('site' => 'github');
+        return $c->redirect('/');
+    }
+});
 
 # initialize database
 use DBI;
-sub setup_schema {
-    my $self = shift;
-    my $dbh = $self->dbh();
-    my $driver_name = $dbh->{Driver}->{Name};
-    my $fname = lc("sql/${driver_name}.sql");
-    open my $fh, '<:encoding(UTF-8)', $fname or die "$fname: $!";
-    my $source = do { local $/; <$fh> };
-    for my $stmt (split /;/, $source) {
-        next unless $stmt =~ /\S/;
-        $dbh->do($stmt) or die $dbh->errstr();
-    }
+sub dbh {
+    my $c = shift;
+    $self->{dbh} //= DBI->connect(@{ $c->config->{DBI} });
 }
 
 1;
