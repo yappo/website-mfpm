@@ -25,7 +25,7 @@ sub make_instance {
         ],
         'function' => {
         },
-        ($context->debug_mode ? ( warn_handler => sub {
+        ($ENV{PLACK_ENV} eq 'development' ? ( warn_handler => sub {
             Text::Xslate->print( # print method escape html automatically
                 '[[', @_, ']]',
             );
