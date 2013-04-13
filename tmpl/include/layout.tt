@@ -56,7 +56,8 @@
             [% content %]
         </div>
         <footer class="footer">
-            Powered by <a href="http://amon.64p.org/">Amon2</a>
+            <p><a href="https://github.com/yappo/website-mfpm">repository</a></p>
+            <p>Powered by <a href="http://amon.64p.org/">Amon2</a></p>
         </footer>
     </div>
 <script>
