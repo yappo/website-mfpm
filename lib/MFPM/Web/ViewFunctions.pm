@@ -41,8 +41,11 @@ sub like_location {
     MFPM->context->req->uri->path =~ m{^$path};
 }
 
-sub is_login { !! MFPM->context->user }
-sub user { MFPM->context->user }
+sub is_login { defined MFPM->context->user('login') }
+sub user {
+    my $key = shift;
+    MFPM->context->user($key);
+}
 
 sub l {
     my $base = shift;

@@ -35,7 +35,7 @@
                     </ul>
                 <ul class="nav pull-right">
 [% IF is_login() -%]
-                  <li><a href="[% user().html_url %]"><img src="[% user().avatar_url %]" width="16" />[% l('Hello, %1', user().login) -%]</a></li>
+                  <li><a href="[% user('html_url') %]"><img src="[% user('avatar_url') %]" width="16" />[% l('Hello, %1', user('login')) -%]</a></li>
                   <li>
                       <a href="#logout" id="logout-link">[% l('logout') -%]</a>
                       <form action="/account/logout" method="post" id="logout-form">

@@ -63,9 +63,10 @@ __PACKAGE__->add_trigger(
 );
 
 sub user {
-    my $c = shift;
-    return unless $c->session->get('user');
-    $c->session->get('user');
+    my($c, $k) = @_;
+    my $user = $c->session->get('user');
+    return unless $user && ref($user) eq 'HASH';
+    return $user->{$k};
 }
 
 1;
