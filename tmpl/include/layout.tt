@@ -26,13 +26,12 @@
     <div class="navbar navbar-fixed-top">
         <div class="navbar-inner">
             <div class="container">
-                <a class="brand" href="/"><img src="/static/img/mfpm.png" width="24" /></a>
+                <a class="brand" href="/"><img src="/static/img/mfpm.png" width="24" />MFPM</a>
                 <div class="nav-collapse">
                     <ul class="nav">
 [% IF user() -%]
                         <li><a href="/dashboard"[% IF like_location('/dashboard') %] class="active"[% END %]>[% l('dashboard') %]</a></li>
 [% END -%]
-                        <li><a href="#">Link</a></li>
                     </ul>
                 <ul class="nav pull-right">
 [% IF user() -%]
